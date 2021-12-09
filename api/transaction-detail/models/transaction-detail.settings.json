@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "transaction_details",
   "info": {
-    "name": "Transaction_detail"
+    "name": "Transaction_detail",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,13 +17,13 @@
       "required": true,
       "default": 1
     },
-    "book": {
-      "via": "transaction_details",
-      "model": "books"
-    },
     "transaction": {
       "model": "transaction",
       "via": "transaction_details"
+    },
+    "book": {
+      "via": "transaction_details",
+      "model": "books"
     }
   }
 }

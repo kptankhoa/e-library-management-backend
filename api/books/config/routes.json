@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/books/isDelete/:id",
+      "handler": "books.isDelete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/books/:id",
       "handler": "books.findOne",
       "config": {

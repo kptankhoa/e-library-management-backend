@@ -14,7 +14,8 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "page": {
       "type": "integer",
@@ -43,10 +44,6 @@
       "model": "categories",
       "via": "books"
     },
-    "transaction_details": {
-      "via": "book",
-      "collection": "transaction-detail"
-    },
     "photo": {
       "model": "file",
       "via": "related",
@@ -58,6 +55,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "transaction_details": {
+      "via": "book",
+      "collection": "transaction-detail"
     }
   }
 }

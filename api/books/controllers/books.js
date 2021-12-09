@@ -5,4 +5,10 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    isDelete: (ctx) => {
+        const id = ctx.params.id;
+        
+        return 'OK'
+    }
+};
